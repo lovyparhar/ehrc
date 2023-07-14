@@ -1,0 +1,10 @@
+server:
+  port: 11000
+
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: dataManager
+    password: dataManager
+

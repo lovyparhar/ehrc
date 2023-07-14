@@ -1,0 +1,43 @@
+server:
+  port: 9000
+
+hospital:
+  id: H1
+twilio:
+  account_sid: AC672c8df8a07feb0493d010434677bd4d
+  auth_token: 8bae59da612205caea8667b59a721784
+  trial_number: +16812069270
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/hospital1
+    username: healthcare
+    password: Healthcare123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: hospital1
+    password: hospital1
+  security:
+    oauth2:
+      client:
+        registration:
+          hospital-client-client-credentials:
+            provider: spring
+            client-id: hospital-client
+            client-secret: hospital_secret
+            authorization-grant-type: client_credentials
+            client-name: hospital-client-client-credentials
+            scope: user.read, user.write
+        provider:
+          spring:
+            issuer-uri: http://localhost:7001
+

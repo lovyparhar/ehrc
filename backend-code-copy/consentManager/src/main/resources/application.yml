@@ -1,0 +1,22 @@
+server:
+  port: 10000
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/consent-manager-data
+    username: healthcare
+    password: Healthcare123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        format_sql: true
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: consentManager
+    password: consentManager
+
