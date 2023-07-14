@@ -1,0 +1,9 @@
+[submodule "ehrc-backend"]
+	path = ehrc-backend
+	url = https://github.com/lovyparhar/ehrc-backend
+[submodule "ehrc-frontend/hospitalApp"]
+	path = ehrc-frontend/hospitalApp
+	url = https://github.com/lovyparhar/hospitalApp.git
+[submodule "ehrc-frontend/healthcareApp"]
+	path = ehrc-frontend/healthcareApp
+	url = https://github.com/lovyparhar/healthcareApp.git
